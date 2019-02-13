@@ -88,7 +88,7 @@ ggplot(curve, aes(perc_meth, avgAbs)) + geom_point()
 
 last two points are plateauing so remove them
 ```{r}
-ggplot(curve[which(curve$perc_meth < 5.0),], aes(perc_meth, avgAbs)) + geom_point() + geom_smooth(method = "lm", se = FALSE)
+ggplot(curve[which(curve$perc_meth < 5.0),], aes(perc_meth, avgAbs)) + geom_point() 
 ```
 
 find regression line
@@ -190,10 +190,11 @@ tuk
 
 **Conclusions: Effect of ploidy and heat stress on global 5-mC DNA methylation**  
 Based on the Tukey's test results:  
+
 1. The diploid heat stress %5-mC methylation is significantly different from 
-  a. the diploid control 
-  b. the triploid control 
-  c. the triploid heatstress 
+	- the diploid control 
+ 	- the triploid control 
+ 	- the triploid heatstress 
 2. The triploid heat stress %5-mC is not different than the diploid or triploid controls. 
 
 In summary, diploid ctenidia shows a significant increase in global 5-mC methylation in response to heatstress while triploid ctenidia does not. 
