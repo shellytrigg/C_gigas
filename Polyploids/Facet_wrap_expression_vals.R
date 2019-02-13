@@ -65,7 +65,7 @@ ggplot(STACKED_data)+geom_boxplot(aes(x=Desiccation, y=delta_Ct,fill=Ploidy))+th
   scale_fill_manual(values=c("#31C4ED", "#62D12B"),
                     labels=c("Diploid","Triploid"))+
   guides(fill=guide_legend(title="Ploidy"))+
-  scale_x_discrete(labels=c("Control","Desiccation + Elevated Temp.")) +
+  scale_x_discrete(labels=c("Control","Desiccation \n + Elevated Temp.")) +
   labs(x="Treatment", y=expression(paste("Expression (",Delta,"Ct)"))) + 
   facet_wrap(~Transcript, scale = "free")
 
@@ -78,8 +78,8 @@ ggplot(STACKED_log_data)+geom_boxplot(aes(x=Desiccation, y=log_delta_Ct,fill=Plo
   scale_fill_manual(values=c("#31C4ED", "#62D12B"),
                     labels=c("Diploid","Triploid"))+
   guides(fill=guide_legend(title="Ploidy"))+
-  scale_x_discrete(labels=c("Control","Desiccation + Elevated Temp.")) +
-  labs(x="Treatment", y=expression(paste("Expression (",Delta,"Ct)"))) + 
+  scale_x_discrete(labels=c("Control","Desiccation \n + Elevated Temp.")) +
+  labs(x="Treatment", y=expression(paste("Expression (log",Delta,"Ct)"))) + 
   facet_wrap(~Transcript, scale = "free")
 
 
